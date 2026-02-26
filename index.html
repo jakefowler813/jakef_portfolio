@@ -5,29 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jake Fowler | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
+    <div class="grid-overlay"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav>
+        <div class="logo">
+            <span class="bracket">&lt;</span>JF <span class="bracket">/&gt;</span><span class="cursor">_</span>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="mailto:fowlermj@dukes.jmu.edu">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
             <h1>Jake Fowler</h1>
-            <p class="subtitle">Student at James Madison University</p>
-        </header>
+            <p class="subtitle">Computer Science Student @ <strong>James Madison University</strong></p>
+            <div class="hero-btns">
+                <a href="https://github.com/jakefowler813" target="_blank" class="btn primary">View GitHub</a>
+                <a href="mailto:fowlermj@dukes.jmu.edu" class="btn secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll to explore</p>
+        </div>
+    </header>
 
-        <main>
-            <section class="intro">
-                <h2>Welcome to my .tech Portfolio</h2>
-                <p>Testing the deployment of my portfolio site. If you can see this, the DNS records are officially "cooked" and working!</p>
-            </section>
+    <main>
+        <section id="about" class="section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2 class="section-title left">Technical Profile</h2>
+                    <p>I am a software developer at JMU dedicated to building robust and efficient applications. My expertise lies in backend systems and algorithmic problem-solving. I thrive on translating complex requirements into clean, maintainable code using **Python, Java, and C**.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h4>3.5+</h4>
+                        <p>Years Coding</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>CS 347</h4>
+                        <p>Full Stack Web Development</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <section class="links">
-                <a href="https://github.com/jakefowler813" class="btn">GitHub</a>
-                <a href="mailto:fowlermj@dukes.jmu.edu" class="btn">Contact Me</a>
-            </section>
-        </main>
+        <section id="skills" class="section">
+            <h2 class="section-title">Technical Stack</h2>
+            <p class="section-subtitle">Core languages and development tools.</p>
+            <div class="skills-container">
+                <div class="skill-item">Python / Django</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">C / C++</div>
+                <div class="skill-item">HTML / CSS / JS</div>
+                <div class="skill-item">Git &amp; GitHub</div>
+                <div class="skill-item">VS Code</div>
+            </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 Jake Fowler | Built at JMU</p>
-        </footer>
-    </div>
+        <section id="projects" class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Technical implementations and software engineering work.</p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3>Coming Soon...</h3>
+                    <p>Description</p>
+                    <div class="tags">
+                        <span class="tag">Tag</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">📚</div>
+                    <h3>Local Library Web App</h3>
+                    <p>A full-stack library management system built using the Django framework.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🛜</div>
+                    <h3>Coming soon...</h3>
+                    <p>Description</p>
+                    <div class="tags">
+                        <span class="tag">Tag</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jake Fowler | jakef.tech | Built at James Madison University</p>
+    </footer>
 </body>
 </html>
