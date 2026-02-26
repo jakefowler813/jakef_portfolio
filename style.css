@@ -139,4 +139,108 @@ nav {
 .blob-1 { top: -150px; right: -150px; }
 .blob-2 { bottom: -150px; left: -150px; }
 
+.scroll-indicator {
+    position: absolute;
+    bottom: 80px;      /* Moved up from 30px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.9;      /* Increased from 0.6 for better clarity */
+    transition: 0.3s;
+}
+
+.mouse {
+    width: 22px;
+    height: 35px;
+    border: 2px solid var(--purple);
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--purple);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    border-radius: 50%;
+    animation: scroll-wheel 1.5s infinite;
+}
+
+/* The vertical movement animation */
+@keyframes scroll-wheel {
+    0% { opacity: 1; top: 8px; }
+    100% { opacity: 0; top: 20px; }
+}
+
+.scroll-indicator p {
+    font-size: 0.6rem;
+    margin-top: 10px;
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Status Badge (Above Heading) --- */
+.status-badge {
+    background: rgba(120, 81, 169, 0.1);
+    border: 1px solid rgba(120, 81, 169, 0.3);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    color: var(--light-purple);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88; /* Bright green for "available" */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Social Ribbon (Between Buttons & Scroll) --- */
+.hero-socials {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    opacity: 0.7;
+}
+
+.hero-socials a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.8rem;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.hero-socials a:hover {
+    color: var(--purple);
+    transform: translateY(-2px);
+}
+
+.divider {
+    color: var(--purple);
+    font-size: 0.8rem;
+}
+
 footer { text-align: center; padding: 5rem 2rem; color: #444; font-size: 0.8rem; }

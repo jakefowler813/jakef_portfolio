@@ -34,12 +34,30 @@
 
     <header id="home" class="hero">
         <div class="hero-content">
+            <div class="status-badge">
+                <span class="dot"></span>
+                Available for Summer 2026 Internships
+            </div>
             <h1>Jake Fowler</h1>
-            <p class="subtitle">Computer Science Student @ <strong>James Madison University</strong></p>
+            <p class="subtitle">
+                Computer Science Student @ <strong>James Madison University</strong> |
+                <span id="typewriter"></span><span class="cursor">|</span>
+            </p>
             <div class="hero-btns">
                 <a href="https://github.com/jakefowler813" target="_blank" class="btn primary">View GitHub</a>
                 <a href="mailto:fowlermj@dukes.jmu.edu" class="btn secondary">Get In Touch</a>
             </div>
+            <div class="hero-socials">
+                <a href="https://github.com/jakefowler813" target="_blank">GitHub</a>
+                <span class="divider">/</span>
+                <a href="https://www.linkedin.com/in/jake-fowler-47a622274/" target="_blank">LinkedIn</a>
+                <span class="divider">/</span>
+                <a href="mailto:fowlermj@dukes.jmu.edu">Email</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll to explore</p>
         </div>
     </header>
 
@@ -120,6 +138,35 @@
             menu.classList.toggle('is-active');
             menuLinks.classList.toggle('active');
         });
+
+        const textElement = document.getElementById('typewriter');
+        const phrases = ['Python / Django Specialist', 'Software Engineer', 'Full Stack Developer', 'Problem Solver'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < phrases[phraseIndex].length) {
+                textElement.textContent += phrases[phraseIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(erase, 2000);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                textElement.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 50);
+            } else {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(type, 500);
+            }
+        }
+
+        // Initialize the effect
+        document.addEventListener('DOMContentLoaded', type);
     </script>
 </body>
 </html>
